@@ -1,0 +1,50 @@
+@import '/src/global.scss';
+
+.headerContainer {
+  width: 100%;
+  border-bottom: 1px solid $normal-grey;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: saturate(180%) blur(20px);
+  z-index: 100;
+
+  .header {
+    // max-width: $max-width;
+    width: 94%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: item(1.5) 0;
+    display: grid;
+    grid-template-columns: 3fr 2fr 3fr;
+    gap: item(1);
+    align-items: center;
+
+    @media screen and (max-width: 480px) {
+      grid-template-columns: 2fr 3fr 2fr;
+    }
+  
+    h1 {
+      font-size: 18px;;
+      font-weight: 600;
+    }
+  
+    nav {
+      display: flex;
+      justify-content: space-between;
+      gap: item(1);
+  
+      div {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  
+    .contact {
+      font-size: 14px;
+      font-weight: 500;
+      color: $blue;
+      text-align: right;
+    }
+  }
+}

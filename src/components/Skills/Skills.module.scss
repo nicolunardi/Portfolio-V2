@@ -1,0 +1,124 @@
+@import '/src/global.scss';
+
+.skillsContainer {
+  padding: item(20) 0;
+  background-color: $light-grey;
+
+  .skills {
+    width: 94%;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    .title {
+      margin-bottom: item(10);
+      font-size: 6rem;
+      font-weight: 600;
+      letter-spacing: -0.2rem;
+    }
+
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, auto);
+      gap: item(2);
+
+      article.card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid $normal-grey;
+        border-radius: 16px;
+        padding: item(6);
+
+        h2 {
+          margin-bottom: item(2);
+          font-size: 3.2rem;
+          font-weight: 600;
+          text-align: center;
+          letter-spacing: -0.1rem;
+
+          @media screen and (max-width: 480px) {
+            font-size: 2.8rem;
+          }
+        }
+
+        p {
+          font-size: 1.4rem;
+          font-weight: 500;
+          color: gray;
+        }
+      }
+
+      article.mainCard {
+        @extend article.card;
+
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+
+        h2 {
+          text-align: left;
+        }
+
+        p {
+          font-size: 2rem;
+          line-height: 1.4;
+        }
+      }
+
+      article.githubCard {
+        @extend article.card;
+
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background-image: linear-gradient(120deg,#eb4f56,#9d66e9);
+        font-size: 3.2rem;
+        font-weight: 600;
+        text-align: center;
+        color: white;
+        letter-spacing: -0.1rem;
+        padding: 0 !important;
+
+        h2 {
+          margin-bottom: 0;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          padding: item(6);
+        }
+      }
+
+      @media screen and (max-width: 980px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+
+        article.mainCard {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          grid-row-start: 1;
+          grid-row-end: 1;
+        }
+
+        article.githubCard {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
+      }
+
+      // @media screen and (max-width: 600) {
+      //   article.card {
+      //     padding: item(4);
+      //   }
+
+      //   article.githubCard > a {
+      //     padding: item(4);
+      //   }
+      // }
+    }
+  }
+}

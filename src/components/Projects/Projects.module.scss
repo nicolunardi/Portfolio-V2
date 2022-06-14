@@ -1,0 +1,18 @@
+@import '/src/global.scss';
+
+.projects {
+  padding: item(20) 0;
+
+  .titleContainer {
+    height: 100vh;
+  }
+  .title {
+    max-width: $max-width;
+    margin: 0 auto item(10);
+    font-size: 6rem;
+  }
+
+  li {
+    margin-bottom: item(20);
+  }
+}

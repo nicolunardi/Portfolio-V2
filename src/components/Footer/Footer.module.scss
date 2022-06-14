@@ -1,0 +1,11 @@
+@import 'src/global.scss';
+
+.footer {
+  width: 94%;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 10px 0 30px;
+  border-top: 1px solid $normal-grey;
+  font-size: 1.2rem;
+  color: $dark-grey;
+}

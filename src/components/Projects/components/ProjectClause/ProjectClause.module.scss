@@ -1,0 +1,116 @@
+@import '/src/global.scss';
+
+.projectClause {
+  width: 100%;
+  margin: 0 auto;
+
+  > *:not(.projectImage) {
+    width: 94%;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  .projectTitle {
+    margin-bottom: item(4);
+
+    span {
+      display: block;
+      margin-bottom: item(1);
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    .title, .subtitle {
+      font-size: 6rem;
+      letter-spacing: -0.2rem;
+      line-height: 0.9;
+    }
+
+    .subtitle {
+      color: #d3d3d3;
+      // color: $normal-grey;
+    }
+  }
+
+  .projectInfo {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    gap: item(4);
+    margin-bottom: item(4);
+
+    .summary {
+      p {
+        margin-bottom: item(2);
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $dark-grey;
+      }
+    }
+
+    .rightContainer {
+      margin-left: auto;
+
+      .link {
+        border-top: 1px solid $normal-grey;
+        padding-top: item(2);
+      }
+
+      .tech {
+        margin-bottom: item(2);
+      }
+
+      h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      p, a {
+        display: block;
+        font-size: 1.6rem;
+        color: $dark-grey;
+        line-height: 1.4;
+        font-weight: 500;
+      }
+
+      a {
+        color: $blue;
+      }
+    }
+  }
+
+  .projectImage {
+    padding: item(10) 0;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (max-width: 980px) {
+    .projectInfo {
+      display: block;
+
+      .summary {
+        margin-bottom: item(6);
+      }
+
+      .rightContainer {
+        display: flex;
+        justify-content: flex-start;
+
+        .tech {
+          border-right: 1px solid $normal-grey;
+          padding-right: item(4);
+          margin-right: item(4);
+        }
+
+        .link {
+          padding: 0;
+          border-top: 0;
+        }
+      }
+    }
+  }
+}

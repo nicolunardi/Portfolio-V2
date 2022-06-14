@@ -1,0 +1,61 @@
+@import '/src/global.scss';
+
+.contact {
+  width: 94%;
+  max-width: $max-width;
+  min-height: 50vh;
+  margin: 0 auto item(10);
+
+  .title {
+    @include rainbowText;
+
+    margin-bottom: item(10);
+  }
+
+  ul {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: item(5);
+
+    li {
+      img {
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin: 0 auto item(2);
+        opacity: 0.5;
+      }
+
+      h2 {
+        margin-bottom: item(1);
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+      }
+
+      p {
+        margin-bottom: item(1);
+        font-size: 1.6rem;
+        text-align: center;
+      }
+
+      span {
+        display: block;
+        font-size: 1.4rem;
+        text-align: center;
+        color: $blue;
+        font-weight: 500;
+      }
+    }
+
+    @media screen and (max-width: 980px) {
+      display: block;
+
+      li {
+        margin-bottom: item(10);
+      }
+    }
+  }
+}
