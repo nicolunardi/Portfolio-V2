@@ -1,89 +1,70 @@
 import { useEffect, useRef, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Intro.module.scss";
 import headshot from "../../assets/headshot.png";
-import wireframe from "../../assets/wireframe.png";
-
-const isInViewport = (element) => {
-  const rect = element.getBoundingClientRect();
-  return (
-    rect.top >= 0 &&
-    rect.left >= 0 &&
-    rect.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-  );
-};
+import wireframe from "../../assets/Mac_wireframe.jpeg";
 
 const Intro = () => {
+  gsap.registerPlugin(ScrollTrigger);
   const [scale, setScale] = useState(0);
   const [stopAnimation, setStopAnimation] = useState(false);
   const mainRef = useRef(null);
-  const imageRef = useRef(null);
+  const endRef = useRef(null);
+  const wireframeRef = useRef(null);
+  const heroRef = useRef(null);
 
   useEffect(() => {
-    // console.log(window.innerHeight * 2 - scale, scale);
-    if (isInViewport(mainRef.current)) {
-      setStopAnimation(true);
-      return;
-    }
-    const scrollEvent = window.addEventListener("scroll", () => {
-      setScale(window.scrollY);
-      // console.log(
-      //   mainRef?.current?.clientHeight,
-      //   imageRef?.current?.clientHeight,
-      //   window.scrollY
-      // );
-    });
-
-    return () => scrollEvent;
+    gsap.fromTo(
+      wireframeRef.current,
+      { width: "300vw", top: "-50%" },
+      {
+        width: "60vw",
+        top: "80",
+        scrollTrigger: {
+          pin: true,
+          trigger: mainRef.current,
+          start: "top top",
+          end: `bottom top`,
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
   }, []);
 
   useEffect(() => {
-    console.log("here", );
-  }, [scale]);
-
-  const firstHeight = imageRef?.current?.clientHeight;
-  const lastHeight = window.innerHeight * 0.7;
-
-  const movingHeight = firstHeight - lastHeight;
-  const movingScroll = movingHeight / window.innerHeight;
-  // console.log(((scale - 1) * movingScroll) / (scale * movingScroll));
+    gsap.fromTo(
+      heroRef.current,
+      { width: "30vw", top: "10%" },
+      {
+        width: "10vw",
+        top: "200",
+        scrollTrigger: {
+          trigger: mainRef.current,
+          start: "top top",
+          scrub: true,
+        },
+      }
+    );
+  }, []);
 
   return (
     <section className={styles.intro}>
-      <div
-        className={styles.main}
-        style={{ height: window.innerHeight * 2 + "px" }}
-      >
-        <div>
-          <img
-            ref={imageRef}
-            className={styles.backgroundImg}
-            src={wireframe}
-            alt="background"
-            style={{
-              transform: `translateX(-50%) translateY(-50%) scale(${
-                // (scale * movingScroll) / ((scale - 1) * movingScroll)
-                scale * -0.001 + 1
-              })`,
-            }}
-          />
-          <div
-            className={styles.title}
-            style={{
-              transform: `translateX(-50%) translateY(-50%) scale(${
-                // (scale * movingScroll) / ((scale - 1) * movingScroll)
-                scale * -0.001 + 1
-              })`,
-            }}
-          >
-            <img src={headshot} alt="" className={styles.profileImg} />
-            <span>Junior software engineer</span>
-            <h1>Nico Lunardi</h1>
-          </div>
+      <div ref={mainRef} className={styles.main}>
+        <img
+          ref={wireframeRef}
+          className={styles.backgroundImg}
+          src={wireframe}
+          alt="background"
+        />
+        <div ref={heroRef} className={styles.title}>
+          <img src={headshot} alt="headshot" className={styles.profileImg} />
+          <span>Junior software engineer</span>
+          <h1>Nico Lunardi</h1>
         </div>
       </div>
-      <h2 ref={mainRef} className={styles.subtitle}>
+      <h2 ref={endRef} className={styles.subtitle}>
         Full stack developer <br />
         with science background.
       </h2>

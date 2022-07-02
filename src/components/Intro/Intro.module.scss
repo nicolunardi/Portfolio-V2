@@ -1,4 +1,4 @@
-@import '/src/global.scss';
+@import '/src/sass/global.scss';
 
 .intro {
   width: 94%;
@@ -12,28 +12,28 @@
 
   .main {
     position: relative;
+    height: 100vh;
 
     .backgroundImg {
       display: block;
-      width: 200vw;
       height: auto;
+      // width: 80vw;
       position: fixed;
-      top: 45%;
+      top: 50%;
       left: 50%;
       will-change: transform;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%);
     }
 
     .title {
       width: fit-content;
       position: fixed;
-      top: 45%;
       left: 50%;
-      transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%);
 
       .profileImg {
         display: block;
-        width: 30vw;
+        width: 100%;
         height: auto;
         margin: 0 auto item(2);
         border-radius: 50%;
@@ -56,5 +56,6 @@
 
   .subtitle {
     @include rainbowText;
+    margin-top: 10vh;
   }
 }

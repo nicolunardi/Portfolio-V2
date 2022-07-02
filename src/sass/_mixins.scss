@@ -1,0 +1,67 @@
+@import './variables';
+
+// breakpoints
+
+@mixin sm {
+    @media (min-width: #{$screen-sm}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (min-width: #{$screen-md}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (min-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (min-width: #{$screen-xl}) {
+        @content;
+    }
+}
+
+@mixin xxl {
+    @media (min-width: #{$screen-xxl}) {
+        @content;
+    }
+}
+
+
+// rainbow effect
+
+@keyframes intro-gradient {
+    0% {
+      background-position: 0px;
+    }
+  
+    50% {
+      background-position: 100%;
+    }
+  
+    100% {
+      background-position: 0px;
+    }
+  }
+  
+  @mixin rainbowText {
+    font-size: 10rem;
+    font-weight: 600;
+    letter-spacing: -0.5rem;
+    text-align: center;
+    background: linear-gradient(91.36deg, #ECA658 0%, #F391A6 13.02%, #E188C3 25.52%, #A58DE3 37.5%, #56ABEC 49.48%, #737EB7 63.02%, #C8638C 72.92%, #DD5D57 84.38%, #DF6C51 97.92%);
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    background-clip: text;
+    animation: intro-gradient 10s infinite ease both;
+  
+    @media screen and (max-width: 600px) {
+      font-size: 9rem;
+      // font-size: 100%;
+    }
+  }
