@@ -3,12 +3,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./Intro.module.scss";
 import headshot from "../../assets/headshot.png";
-import wireframe from "../../assets/Mac_wireframe.jpeg";
+// import wireframe from "../../assets/Mac_wireframe.jpeg";
+import wireframe from "../../assets/black.png";
 
 const Intro = () => {
   gsap.registerPlugin(ScrollTrigger);
-  const [scale, setScale] = useState(0);
-  const [stopAnimation, setStopAnimation] = useState(false);
   const mainRef = useRef(null);
   const endRef = useRef(null);
   const wireframeRef = useRef(null);
@@ -17,17 +16,18 @@ const Intro = () => {
   useEffect(() => {
     gsap.fromTo(
       wireframeRef.current,
-      { width: "300vw", top: "-50%" },
+      { width: "300vw", top: "-50%", opacity: 0 },
       {
         width: "60vw",
         top: "80",
+        opacity: 1,
         scrollTrigger: {
           pin: true,
           trigger: mainRef.current,
-          start: "top top",
+          start: "0 " + mainRef.current.offsetTop,
           end: `bottom top`,
           scrub: true,
-          markers: true,
+          snap: true,
         },
       }
     );
@@ -36,14 +36,18 @@ const Intro = () => {
   useEffect(() => {
     gsap.fromTo(
       heroRef.current,
-      { width: "30vw", top: "10%" },
+      { scale: 1, top: "10%", color: "black" },
       {
-        width: "10vw",
-        top: "200",
+        scale: 0.5,
+        top: "80",
+        color: "white",
         scrollTrigger: {
+          pin: true,
           trigger: mainRef.current,
-          start: "top top",
+          start: "0 " + mainRef.current.offsetTop,
+          end: "bottom top",
           scrub: true,
+          snap: true,
         },
       }
     );
@@ -60,13 +64,13 @@ const Intro = () => {
         />
         <div ref={heroRef} className={styles.title}>
           <img src={headshot} alt="headshot" className={styles.profileImg} />
-          <span>Junior software engineer</span>
+          <span>Junior Software Engineer</span>
           <h1>Nico Lunardi</h1>
         </div>
       </div>
       <h2 ref={endRef} className={styles.subtitle}>
         Full stack developer <br />
-        with science background.
+        with a medical science background.
       </h2>
     </section>
   );
