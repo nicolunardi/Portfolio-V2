@@ -110,15 +110,15 @@
         }
       }
 
-      // @media screen and (max-width: 600) {
-      //   article.card {
-      //     padding: item(4);
-      //   }
+      @media screen and (max-width: 600) {
+        article.card {
+          padding: item(4);
+        }
 
-      //   article.githubCard > a {
-      //     padding: item(4);
-      //   }
-      // }
+        article.githubCard > a {
+          padding: item(4);
+        }
+      }
     }
   }
 }

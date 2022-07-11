@@ -1,12 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import styles from "./Intro.module.scss";
+import styles from "./IntroDesktop.module.scss";
 import headshot from "../../assets/headshot.png";
-// import wireframe from "../../assets/Mac_wireframe.jpeg";
 import wireframe from "../../assets/black.png";
 
-const Intro = () => {
+const IntroDesktop = () => {
   gsap.registerPlugin(ScrollTrigger);
   const mainRef = useRef(null);
   const endRef = useRef(null);
@@ -34,6 +33,7 @@ const Intro = () => {
   }, []);
 
   useEffect(() => {
+    console.log();
     gsap.fromTo(
       heroRef.current,
       { scale: 1, top: "10%", color: "black" },
@@ -76,4 +76,4 @@ const Intro = () => {
   );
 };
 
-export default Intro;
+export default IntroDesktop;

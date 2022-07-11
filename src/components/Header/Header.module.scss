@@ -1,6 +1,7 @@
 @import '/src/sass/global';
 
 .headerContainer {
+  height: $headerHeight;
   width: 100%;
   border-bottom: 1px solid $normal-grey;
   position: sticky;
@@ -10,7 +11,7 @@
   z-index: 100;
 
   .header {
-    // max-width: $max-width;
+    height: 100%;
     width: 94%;
     max-width: 980px;
     margin: 0 auto;
