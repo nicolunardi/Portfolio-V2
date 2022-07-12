@@ -29,6 +29,19 @@
       font-size: 18px;;
       font-weight: 600;
     }
+
+    .nameSmall {
+      @include xs {
+        display: none;
+      }
+    }
+
+    .nameLarge {
+      display: none;
+      @include xs {
+        display: block;
+      }
+    }
   
     nav {
       display: flex;
