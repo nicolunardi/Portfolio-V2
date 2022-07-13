@@ -4,10 +4,10 @@ const Skills = () => {
   return (
     <div className={styles.skillsContainer}>
       <section className={styles.skills}>
-        <h1 className={styles.title}>My Skills blabla.</h1>
+        <h1 className={styles.title}>About me</h1>
         <div className={styles.gridContainer}>
           <article className={styles.mainCard}>
-            <h2>Master in Computer Science or Science background bla</h2>
+            <h2>Masters in Computer Science or Science background bla</h2>
             <p>
               I turn your designs into pixel-perfect Webflow sites with great
               attention to detail and elegant animations. Say goodbye to the
@@ -18,8 +18,8 @@ const Skills = () => {
           </article>
           <article className={styles.card}>
             <div>
-              <h2>Language</h2>
-              <p>JS, React, Node, python and C.</p>
+              <h2>Languages</h2>
+              <p>JS, Node, Python and C.</p>
             </div>
           </article>
           <article className={styles.card}>
@@ -30,14 +30,14 @@ const Skills = () => {
           </article>
           <article className={styles.card}>
             <div>
-              <h2>5 years</h2>
-              <p>Bla</p>
+              <h2>Databases</h2>
+              <p>MongoDb and PostgreSQL</p>
             </div>
           </article>
           <article className={styles.card}>
             <div>
-              <h2>Language</h2>
-              <p>JS, React, Node, python and C.</p>
+              <h2>Frameworks</h2>
+              <p>React, Express.js and FastApi.</p>
             </div>
           </article>
           <article className={styles.githubCard}>

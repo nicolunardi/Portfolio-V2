@@ -1,6 +1,7 @@
 import React from "react";
 import headshot from "../../assets/headshot.png";
 import styles from "./IntroMobile.module.scss";
+import data from "./../../information.json";
 
 const IntroMobile = () => {
   return (
@@ -8,7 +9,7 @@ const IntroMobile = () => {
       <div className={styles.hero}>
         <img src={headshot} alt="headshot" className={styles.image} />
         <div>
-          <span>Junior Software Engineer</span>
+          <span>{data.intro.title}</span>
           <h1>Nico Lunardi</h1>
         </div>
       </div>
