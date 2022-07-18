@@ -1,7 +1,7 @@
 import React from "react";
 import headshot from "../../assets/headshot.png";
 import styles from "./IntroMobile.module.scss";
-import data from "./../../information.json";
+import { intro } from "./../../information.js";
 
 const IntroMobile = () => {
   return (
@@ -9,8 +9,8 @@ const IntroMobile = () => {
       <div className={styles.hero}>
         <img src={headshot} alt="headshot" className={styles.image} />
         <div>
-          <span>{data.intro.title}</span>
-          <h1>Nico Lunardi</h1>
+          <span>{intro.title}</span>
+          <h1>{intro.name}</h1>
         </div>
       </div>
       <h2 className={styles.subtitle}>

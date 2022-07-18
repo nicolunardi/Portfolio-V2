@@ -30,6 +30,7 @@
         border: 1px solid $normal-grey;
         border-radius: 16px;
         padding: item(2);
+        min-height: 15rem;
 
         @include sm {
           padding: item(6);
@@ -48,10 +49,14 @@
         }
 
         p {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           font-weight: 500;
           color: gray;
           text-align: center;
+
+          @include sm {
+            font-size: 2rem
+          }
         }
       }
 

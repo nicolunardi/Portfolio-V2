@@ -1,4 +1,5 @@
 import styles from "./Skills.module.scss";
+import { skills } from "../../information";
 
 const Skills = () => {
   return (
@@ -7,42 +8,26 @@ const Skills = () => {
         <h1 className={styles.title}>About me</h1>
         <div className={styles.gridContainer}>
           <article className={styles.mainCard}>
-            <h2>Masters in Computer Science or Science background bla</h2>
-            <p>
-              I turn your designs into pixel-perfect Webflow sites with great
-              attention to detail and elegant animations. Say goodbye to the
-              stressful back and forth with developers who have no feel for
-              design. Additionally, I offer consulting services during your
-              design phase with my experience in UI/UX and animation.
-            </p>
+            <h2>{skills.mainCardTitle}</h2>
+            <p>{skills.mainCardText}</p>
           </article>
-          <article className={styles.card}>
-            <div>
-              <h2>Languages</h2>
-              <p>JS, Node, Python and C.</p>
-            </div>
-          </article>
-          <article className={styles.card}>
-            <div>
-              <h2>Styling</h2>
-              <p>CSS, Sass, and Tailwind.</p>
-            </div>
-          </article>
-          <article className={styles.card}>
-            <div>
-              <h2>Databases</h2>
-              <p>MongoDb and PostgreSQL</p>
-            </div>
-          </article>
-          <article className={styles.card}>
-            <div>
-              <h2>Frameworks</h2>
-              <p>React, Express.js and FastApi.</p>
-            </div>
-          </article>
+          {skills.cards.map((card, idx) => (
+            <article key={idx} className={styles.card}>
+              <div>
+                <h2>{card.title}</h2>
+                <p>{card.text}</p>
+              </div>
+            </article>
+          ))}
           <article className={styles.githubCard}>
             <h2>
-              <a href="">Check out my Github!</a>
+              <a
+                href={skills.buttonURL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {skills.buttonText}
+              </a>
             </h2>
           </article>
         </div>
