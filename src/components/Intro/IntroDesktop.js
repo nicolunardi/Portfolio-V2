@@ -2,8 +2,8 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import styles from "./IntroDesktop.module.scss";
-import headshot from "../../assets/headshot.png";
-import wireframe from "../../assets/black.png";
+import headshot from "../../assets/images/headshot.png";
+import wireframe from "../../assets/images/black.png";
 
 const IntroDesktop = () => {
   gsap.registerPlugin(ScrollTrigger);

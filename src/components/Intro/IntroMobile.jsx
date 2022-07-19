@@ -1,5 +1,5 @@
 import React from "react";
-import headshot from "../../assets/headshot.png";
+import headshot from "../../assets/images/headshot.png";
 import styles from "./IntroMobile.module.scss";
 import { intro } from "./../../information.js";
 

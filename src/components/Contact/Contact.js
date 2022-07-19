@@ -1,39 +1,24 @@
-import styles from './Contact.module.scss'
+import styles from "./Contact.module.scss";
+import { contact } from "../../information";
 
 const Contact = () => {
   return (
     <section className={styles.contact}>
-      <h1 className={styles.title}>
-        Let's work together.
-      </h1>
+      <h1 className={styles.title}>{contact.title}</h1>
       <ul>
-        <li>
-          <a href=''>
-            <img src={require('../../assets/email.png')} alt='email' />
-            <h2>Email</h2>
-            <p>nlunardi@hotmail.com</p>
-            <span>Chat now ></span>
-          </a>
-        </li>
-        <li>
-          <a href=''>
-            <img src={require('../../assets/linkedin.png')} alt='linkedin' />
-            <h2>Linked In</h2>
-            <p>Let's connect those shit</p>
-            <span>Connect now ></span>
-          </a>
-        </li>
-        <li>
-          <a href=''>
-            <img src={require('../../assets/github.png')} alt='github' />
-            <h2>Github</h2>
-            <p>Browse more project keke</p>
-            <span>Browse ></span>
-          </a>
-        </li>
+        {contact.links.map((link, idx) => (
+          <li key={idx}>
+            <a href={link.url} target="_blank" rel="noopener noreferrer">
+              <img src={link.icon} alt={link.name} />
+              <h2>{link.name}</h2>
+              <p>{link.text}</p>
+              <span>{link.subtext}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
-  )
-}
+  );
+};
 
 export default Contact;

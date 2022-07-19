@@ -1,4 +1,4 @@
-import styles from './ProjectClause.module.scss'
+import styles from "./ProjectClause.module.scss";
 
 const ProjectClause = (props) => {
   const {
@@ -10,7 +10,7 @@ const ProjectClause = (props) => {
     summary,
     techs,
     githubLink,
-    projectLink
+    projectLink,
   } = props;
 
   return (
@@ -18,48 +18,42 @@ const ProjectClause = (props) => {
       <div className={styles.projectTitle}>
         <span>No. 0{index}</span>
         <h2 className={styles.title}>{title}</h2>
-        {
-          subtitle && (
-            <h2 className={styles.subtitle}>{subtitle}</h2>
-          )
-        }
+        {subtitle && <h2 className={styles.subtitle}>{subtitle}</h2>}
       </div>
       <div className={styles.projectInfo}>
         <div className={styles.summary}>
-          {
-            summary.map((para, i) => (
-              <p key={i}>{para}</p>
-            ))
-          }
+          {summary.map((para, idx) => (
+            <p key={idx}>{para}</p>
+          ))}
         </div>
         <div className={styles.rightContainer}>
           <div className={styles.tech}>
             <h3>Tech</h3>
-            {
-              techs.map((tech, i) => (
-                <p key={i}>{tech}</p>
-              ))
-            }
+            {techs.map((tech, i) => (
+              <p key={i}>{tech}</p>
+            ))}
           </div>
           <div className={styles.link}>
             <h3>Link</h3>
-            <a href={githubLink}>Code</a>
-            {
-              projectLink && (
-                <a href={projectLink}>Project</a>
-              )
-            }
+            <a href={githubLink} target="_blank" rel="noopener noreferrer">
+              Code
+            </a>
+            {projectLink && (
+              <a href={projectLink} target="_blank" rel="noopener noreferrer">
+                Project
+              </a>
+            )}
           </div>
         </div>
       </div>
       <div
         className={styles.projectImage}
-        style={{ backgroundColor: backgroundColor }
-      }>
+        style={{ backgroundColor: backgroundColor }}
+      >
         <img src={img} alt={title} />
       </div>
     </article>
-  )
-}
+  );
+};
 
 export default ProjectClause;
