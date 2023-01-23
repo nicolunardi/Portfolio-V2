@@ -9,7 +9,12 @@ const Skills = () => {
         <div className={styles.gridContainer}>
           <article className={styles.mainCard}>
             <h2>{skills.mainCardTitle}</h2>
-            <p>{skills.mainCardText}</p>
+            {skills.mainCardText.map((text, idx) => (
+              <div key={idx}>
+                <p>{text}</p>
+                <br />
+              </div>
+            ))}
           </article>
           {skills.cards.map((card, idx) => (
             <article key={idx} className={styles.card}>

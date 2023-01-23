@@ -11,12 +11,14 @@ export const intro = {
 };
 
 export const skills = {
-  mainCardTitle: "Masters in IT with a medical science background",
-  mainCardText:
-    "I turn your designs into pixel-perfect Webflow sites with great attention to detail and elegant animations. Say goodbye to the stressful back and forth with developers who have no feel for design. Additionally, I offer consulting services during your design phase with my experience in UI/UX and animation.",
+  mainCardTitle: "Postgraduate in CS with a medical science background",
+  mainCardText: [
+    "As a highly motivated medical scientist with a desire to transition into the field of software engineering, I am excited to bring my passion for problem-solving, analytical thinking and training people to a new industry. With a postgraduate degree in IT, I have the technical knowledge and understanding to excel in software development. My background in medical science has honed my ability to think critically and approach problems from multiple angles, making me well-suited to tackle the challenges of software engineering.",
+    "I have a natural talent for teaching and have experience training new staff, helping them to develop the skills and confidence they need to become fully contributing team members. I am eager to continue learning and growing in this field, and I am confident that my unique perspective, skills and ability to train people will make me a valuable asset to any team.",
+  ],
   cards: [
     { title: "Languages", text: "JS, Node, Python and C." },
-    { title: "Styling", text: "CSS, Sass, and Tailwind." },
+    { title: "Styling", text: "CSS, Sass, Bootstrap." },
     { title: "Databases", text: "MongoDb and PostgreSQL" },
     { title: "Frameworks", text: "React, Express.js and FastApi." },
   ],
@@ -31,9 +33,8 @@ export const projects = [
     img: discussThumbnail,
     backgroundColor: "#efe5fe",
     summary: [
-      "Slack like app built with a vanilla javascript frontend, bootstrap for styling, and backend of node.js and express.js.",
-      "It has most of the functionality of slack, including but not limited to signing up and login, joining and creating private or public channels, inviting members to channels, pinning, reacting to, editing, and deleting messages, as well as sending image messages",
-      "The motivation behind building the project was to understand how javascript really works before moving on to learning a framework.",
+      "Discuss is a real-time messaging application that is similar to Slack, built with a combination of vanilla JavaScript for the frontend, Bootstrap for styling, and a Node.js and Express.js backend. It offers a wide range of features including user authentication, the ability to create and join both private and public channels, inviting team members to channels, pinning, editing, and deleting messages, as well as sending image messages.",
+      "The project was created with the motivation of gaining a deeper understanding of JavaScript, before moving on to learning a framework. It serves as a great example of the power and versatility of JavaScript, highlighting my proficiency in building complex and dynamic web applications from scratch.",
     ],
     techs: ["Javascript", "Node.js", "Bootstrap"],
     githubLink: "https://github.com/nicolunardi/Discuss-client",
@@ -45,9 +46,9 @@ export const projects = [
     img: travelaThumbnail,
     backgroundColor: "#fbcdcd",
     summary: [
-      "AirBnB like app built with React and Material UI for the frontend, and a backend of FastApi, a python framework.",
-      "The app allows users to create and manage listings as well as the bookings for each listing. Users can also search for available listings and filter or sort them.",
-      "I was motivated to build this project in order to solidify my understanding of React, as well as to try a different backend framework to Express.js. I chose FastApi as I required a fast, lightweight solution, as well as for a way to build on my python experience.",
+      "AirBrB is a creative spin on the popular vacation rental platform, AirBnB. Built with React and Material UI for the frontend, and FastAPI, a Python framework, for the backend, it's a powerful and visually stunning application.",
+      "The application allows for the creation and management of listings, as well as the ability to handle bookings for each listing. Users are also able to search for available listings and filter or sort them based on their preferences.",
+      "The motivation behind this project was to solidify my understanding of React, and to gain experience using a different backend framework in comparison to Express.js. The choice of FastAPI was made due to its fast performance and lightweight structure, as well as to build on my experience with Python. This project demonstrates my technical proficiency in multiple web technologies and my ability to create efficient and user-friendly applications.",
     ],
     techs: ["React", "Mui v5", "Python", "FastApi"],
     githubLink: "https://github.com/nicolunardi/travela-client",
@@ -59,8 +60,8 @@ export const projects = [
     img: codeThumbnail,
     backgroundColor: "#cde9fb",
     summary: [
-      "Graph Visualizer is a library written entirely in C that allows for the creating of graphs using adjacency lists. Once the graphs are created, you can add/remove/edit vertices (weighted or not) as well as edges. The adjacency list representation of the graph can then be printed out to a specified file.",
-      "The library also has functions to perform a simple Pagerank algorithm on the graph as well as calculate and display the shortest path using Dijkstra's algorithm",
+      "Graph Visualizer is a C library that showcases the my understanding of graph algorithms and data structures. The library provides a comprehensive set of functionalities for creating and manipulating graphs using adjacency lists. It allows for the addition, removal, and editing of vertices (weighted or not) and edges, as well as the ability to export the adjacency list representation of the graph to a specified file.",
+      "Additionally, it has built-in functions to perform a simple Pagerank algorithm and to calculate and display the shortest path using Dijkstra's algorithm. These advanced functionalities demonstrate my proficiency in understanding and implementing various graph algorithms. Overall, this library is an efficient and powerful tool for graph data manipulation and visualization, and it demonstrates my solid understanding in the field of graph algorithms and data structures.",
     ],
     techs: ["C"],
     githubLink: "https://github.com/nicolunardi/graph-visualizer",
