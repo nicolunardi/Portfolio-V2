@@ -4,7 +4,7 @@ import { projects } from "../../information";
 
 const Projects = () => {
   return (
-    <section className={styles.projects}>
+    <section className={styles.projects} name="projects">
       <div className={styles.titleContainer}>
         <h1 className={styles.title}>Projects</h1>
       </div>

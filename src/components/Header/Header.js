@@ -1,4 +1,5 @@
 import styles from "./Header.module.scss";
+import HeaderLink from "./HeaderLink";
 
 const Header = () => {
   return (
@@ -7,11 +8,13 @@ const Header = () => {
         <h1 className={styles.nameLarge}>Nico Lunardi</h1>
         <h1 className={styles.nameSmall}>NL</h1>
         <nav>
-          <div>About</div>
-          <div>Skills</div>
-          <div>Projects</div>
+          <HeaderLink section="home" text="Home"></HeaderLink>
+          <HeaderLink section="about" text="About"></HeaderLink>
+          <HeaderLink section="projects" text="Projects"></HeaderLink>
         </nav>
-        <div className={styles.contact}>Contact</div>
+        <div className={styles.contact}>
+          <HeaderLink section="contact" text="Contact"></HeaderLink>
+        </div>
       </header>
     </div>
   );

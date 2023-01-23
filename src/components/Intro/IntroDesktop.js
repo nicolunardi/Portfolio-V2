@@ -54,7 +54,7 @@ const IntroDesktop = () => {
   }, []);
 
   return (
-    <section className={styles.intro}>
+    <section className={styles.intro} name="home">
       <div ref={mainRef} className={styles.main}>
         <img
           ref={wireframeRef}

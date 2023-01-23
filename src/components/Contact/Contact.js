@@ -3,7 +3,7 @@ import { contact } from "../../information";
 
 const Contact = () => {
   return (
-    <section className={styles.contact}>
+    <section className={styles.contact} name="contact">
       <h1 className={styles.title}>{contact.title}</h1>
       <ul>
         {contact.links.map((link, idx) => (

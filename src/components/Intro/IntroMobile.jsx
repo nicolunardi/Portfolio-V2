@@ -5,7 +5,7 @@ import { intro } from "./../../information.js";
 
 const IntroMobile = () => {
   return (
-    <section className={styles.intro}>
+    <section className={styles.intro} name="home">
       <div className={styles.hero}>
         <img src={headshot} alt="headshot" className={styles.image} />
         <div>
