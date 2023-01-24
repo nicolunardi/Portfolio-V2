@@ -34,6 +34,7 @@
       @include xs {
         display: none;
       }
+      cursor: pointer;
     }
 
     .nameLarge {
@@ -41,6 +42,7 @@
       @include xs {
         display: block;
       }
+      cursor: pointer;
     }
   
     nav {

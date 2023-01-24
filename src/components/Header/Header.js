@@ -1,5 +1,5 @@
 import styles from "./Header.module.scss";
-import HeaderLink from "./HeaderLink";
+import { HeaderLink } from "./components";
 
 const Header = () => {
   return (
@@ -13,7 +13,9 @@ const Header = () => {
           <HeaderLink section="projects" text="Projects"></HeaderLink>
         </nav>
         <div className={styles.contact}>
-          <HeaderLink section="contact" text="Contact"></HeaderLink>
+          <div>
+            <HeaderLink section="contact" text="Contact"></HeaderLink>
+          </div>
         </div>
       </header>
     </div>
