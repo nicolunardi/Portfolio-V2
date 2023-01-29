@@ -6,41 +6,51 @@
   margin: 0 auto;
   padding-bottom: item(20);
 
+  .main {
+    height: 100vh;
 
-  .hero {
-    height: calc(100vh - #{$headerHeight});
-    display: flex;
-    gap: 8rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    .title {
+      width: 100%;
+      margin: 15vh auto;
 
-      .image {
+      .profileImg {
         display: block;
         width: 100%;
-        max-width: 450px;
+        height: auto;
+        margin: 0 auto item(2);
+        border-radius: 50%;
       }
 
       span {
         display: block;
-        font-size: 2rem;
+        font-size: 2.4rem;
         font-weight: 600;
         text-align: center;
         width: 100%;
+
+        @include md {
+          font-size: 3.2rem;
+        }
       }
 
       h1 {
         width: 100%;
         margin: 2rem auto;
-        font-size: 4.8rem;
+        font-size: 4rem;
         text-align: center;
+
+        @include md {
+          font-size: 4.8rem;
+        }
       }
+
+      @include md {
+        width: 50%
+      }
+    }
   }
 
   .subtitle {
     @include rainbowText;
-    margin-top: 10vh;
-    font-size: 5rem !important;
   }
-
 }

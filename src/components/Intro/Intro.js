@@ -1,7 +1,7 @@
-import styles from "./IntroDesktop.module.scss";
+import styles from "./Intro.module.scss";
 import headshot from "../../assets/images/headshot.png";
 
-const IntroDesktop = () => {
+const Intro = () => {
   return (
     <section className={styles.intro} name="home">
       <div className={styles.main}>
@@ -19,4 +19,4 @@ const IntroDesktop = () => {
   );
 };
 
-export default IntroDesktop;
+export default Intro;

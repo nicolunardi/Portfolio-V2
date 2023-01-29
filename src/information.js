@@ -18,7 +18,7 @@ export const skills = {
   ],
   cards: [
     { title: "Languages", text: "JS, Node, Python and C." },
-    { title: "Styling", text: "CSS, Sass, Bootstrap." },
+    { title: "Styling", text: "CSS, Sass and Bootstrap." },
     { title: "Databases", text: "MongoDb and PostgreSQL" },
     { title: "Frameworks", text: "React, Express.js and FastApi." },
   ],

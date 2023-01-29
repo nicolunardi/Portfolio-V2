@@ -1,18 +1,10 @@
 @import './sass/global';
 
-// .container {
-//   max-width: $max-width;
-//   margin: 0 auto;
-//   border: 1px solid red;
-// }
-
-.desktop {
-    display: none;
-
-    @include lg {
-        display: block;
-    }
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
 }
+
 
 .mobile {
     @include lg {
