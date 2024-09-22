@@ -13,18 +13,43 @@ export const intro = {
 export const skills = {
   mainCardTitle: "Postgraduate in CS with a medical science background",
   mainCardText: [
-    "As a highly motivated medical scientist with a desire to transition into the field of software engineering, I am excited to bring my passion for problem-solving, analytical thinking and training people to a new industry. With a postgraduate degree in IT, I have the technical knowledge and understanding to excel in software development. My background in medical science has honed my ability to think critically and approach problems from multiple angles, making me well-suited to tackle the challenges of software engineering.",
-    "I have a natural talent for teaching and have experience training new staff, helping them to develop the skills and confidence they need to become fully contributing team members. I am eager to continue learning and growing in this field, and I am confident that my unique perspective, skills and ability to train people will make me a valuable asset to any team.",
+    "As a software engineer with a background in medical science, I bring a unique blend of analytical thinking and problem-solving skills to the tech industry. With over a year of professional experience at a major VFX company, I specialize in Python and JavaScript, creating tools for artists and maintaining robust pipelines. My postgraduate degree in IT provides me with a solid foundation in software development principles.",
+    "My experience leading teams in a medical setting has honed my critical thinking and adaptability, enabling me to approach complex problems from multiple angles. I have a passion for teaching and have successfully trained new staff, helping them build the skills and confidence needed to thrive in a collaborative environment.",
+    "I am eager to continue my growth in software engineering and am confident that my diverse skill set and perspective will make me a valuable asset to any team.",
   ],
   cards: [
     { title: "Languages", text: "JS, Node, Python and C." },
     { title: "Styling", text: "CSS, Sass and Bootstrap." },
-    { title: "Databases", text: "MongoDb and PostgreSQL" },
-    { title: "Frameworks", text: "React, Express.js and FastApi." },
+    { title: "Databases", text: "MongoDb, PostgreSQL, SQLite." },
+    { title: "Frameworks", text: "Django, React, QT" },
   ],
   buttonURL: "https://github.com/nicolunardi",
   buttonText: "Check out my Github!",
 };
+
+export const careerHistory = [
+  {
+    subtitle: "Junior Developer,  Jun 2023 - present",
+    title: "Fin Design + Effects",
+    summary: [
+      "During my tenure at FIN, a leading VFX company, I played a key role in building and maintaining the pipeline and developing tools for artists. I created and updated internal APIs for our Django-based website and integrated external APIs to enhance workflow efficiency. Notably, I developed a forecasting tool using Python and QT that predicts render times based on historical data, enabling the company to meet deadlines more accurately and improve project budgeting and bidding.",
+      "Additionally, I implemented integrations that streamline employee processes, such as allowing staff to request sick leave via Slack instead of using Xero, and providing weekly schedules through Slack messages sourced from Runn, the project management tool used by producers.",
+    ],
+    techs: ["Python", "Django", "Javascript", "QT"],
+    website: "https://www.findesign.com.au/",
+  },
+  {
+    subtitle: "Hospital Scientist,  Jun 2018 - Jun 2023",
+    title: "NSW Health Pathology",
+    summary: [
+      "During my time as a hospital scientist at NSW Health Pathology, I led a team dedicated to maintaining high-quality and efficient laboratory operations. I was instrumental in training new recruits, helping them become fully contributing members of the team. Recognizing the need for improved communication, I implemented Slack as our primary communication tool, which enhanced information sharing and facilitated the organization of social events. This initiative not only boosted team morale and increased social interactions but also significantly reduced paper wastage.",
+      "Furthermore, I developed and implemented workflows designed to streamline laboratory processes, further enhancing our operational efficiency. This experience reinforced my belief in the power of technology to transform team dynamics and improve productivity in high-pressure environments.",
+    ],
+    techs: ["N/A"],
+
+    website: "https://pathology.health.nsw.gov.au/",
+  },
+];
 
 export const projects = [
   {

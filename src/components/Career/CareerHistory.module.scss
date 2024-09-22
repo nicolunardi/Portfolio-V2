@@ -1,0 +1,20 @@
+@import '/src/sass/global.scss';
+
+.careerHistory {
+  padding: item(5) 0;
+
+  .titleContainer {
+    width: 94%;
+    margin: 0 auto;
+    // max-width: $max-width;
+  }
+  .title {
+    max-width: $max-width;
+    margin: 0 auto item(10);
+    font-size: 6rem;
+  }
+
+  li {
+    margin-bottom: item(20);
+  }
+}

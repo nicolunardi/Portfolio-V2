@@ -61,7 +61,7 @@
       }
 
       article.mainCard {
-        @extend article.card;
+        @extend article, .card;
 
         display: block;
         grid-column-start: 1;
@@ -85,7 +85,7 @@
       }
 
       article.githubCard {
-        @extend article.card;
+        @extend article, .card;
 
         grid-column-start: 1;
         grid-column-end: 5;

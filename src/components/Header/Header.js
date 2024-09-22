@@ -10,6 +10,7 @@ const Header = () => {
         <nav>
           <HeaderLink section="home" text="Home"></HeaderLink>
           <HeaderLink section="about" text="About"></HeaderLink>
+          <HeaderLink section="careerHistory" text="Career"></HeaderLink>
           <HeaderLink section="projects" text="Projects"></HeaderLink>
         </nav>
         <div className={styles.contact}>
