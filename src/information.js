@@ -11,7 +11,7 @@ export const intro = {
 };
 
 export const skills = {
-  mainCardTitle: "Postgraduate in CS with a medical science background",
+  mainCardTitle: "Software Engineer with a medical science background",
   mainCardText: [
     "As a software engineer with a background in medical science, I bring a unique blend of analytical thinking and problem-solving skills to the tech industry. With over a year of professional experience at a major VFX company, I specialize in Python and JavaScript, creating tools for artists and maintaining robust pipelines. My postgraduate degree in IT provides me with a solid foundation in software development principles.",
     "My experience leading teams in a medical setting has honed my critical thinking and adaptability, enabling me to approach complex problems from multiple angles. I have a passion for teaching and have successfully trained new staff, helping them build the skills and confidence needed to thrive in a collaborative environment.",
